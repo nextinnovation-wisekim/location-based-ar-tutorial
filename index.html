@@ -29,13 +29,13 @@
       arjs="sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;"
     >
     <!-- <a-scene embedded arjs> -->
-      <a-assets>
+      <!-- <a-assets>
         <a-asset-item id="animated-asset" src="./assets/magnemite/bong_greeting.glb"></a-asset-item>
-    </a-assets>
+    </a-assets> -->
     <a-marker id="animated-marker" type='barcode' value='5'>
       <a-entity
-      rotation="90 0 0"
-          gltf-model="#animated-asset"
+          rotation="90 0 0"
+          gltf-model="./assets/magnemite/bong_greeting.glb"
           scale="1">
       </a-entity>
   </a-marker>
