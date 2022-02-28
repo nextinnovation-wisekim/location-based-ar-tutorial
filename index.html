@@ -9,6 +9,8 @@
     <!-- <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script> -->
     <script src="https://raw.githack.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
     <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
     <script>
       THREEx.ArToolkitContext.baseURL =
         "https://raw.githack.com/jeromeetienne/ar.js/master/three.js/";
@@ -27,6 +29,16 @@
       arjs="sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;"
     >
     <!-- <a-scene embedded arjs> -->
+      <a-assets>
+        <a-asset-item id="animated-asset2" src="./assets/magnemite/bong_greeting.glb"></a-asset-item>
+    </a-assets>
+    <a-marker id="animated-marker" type='barcode' value='5'>
+      <a-entity
+      rotation="90 0 0"
+          gltf-model="#animated-asset2"
+          scale="1">
+      </a-entity>
+  </a-marker>
       <a-assets>
         <a-asset-item id="animated-asset" src="https://raw.githubusercontent.com/nicolocarpignoli/nicolocarpignoli.github.io/master/ar-playground/models/CesiumMan.gltf"></a-asset-item>
     </a-assets>
