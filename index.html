@@ -16,13 +16,13 @@
   <body style="margin: 0; overflow: hidden">
     <!-- <a-scene artoolkit="sourceType: webcam;"> -->
     <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
-      <a-marker type="barcode" value="봉이">
-        <a-box position="0 0.5 0" material="opacity:0.8">
-        </a-box>
+      <a-marker type="pattern" url="./assets/markertest.png">
+        <!-- <a-box position="0 0.5 0" material="opacity:0.8">
+        </a-box> -->
+        <a-assets>
+          <a-asset-item id="animated-asset" src="./assets/magnemite/bong_greeting.glb"></a-asset-item>
+        </a-assets>
       </a-marker>
-      <a-assets>
-        <a-asset-item id="animated-asset" src="./assets/magnemite/bong_greeting.glb"></a-asset-item>
-      </a-assets>
       <a-marker-camera></a-marker-camera>
       <!-- 봉이
         <a-entity
